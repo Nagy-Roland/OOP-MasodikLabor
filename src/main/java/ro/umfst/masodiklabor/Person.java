@@ -5,10 +5,11 @@ public class Person {
     
     private final String username;
     private final int age;
-
-    public Person(String username, int age) {
+    static  final int  minimalber = 500;
+    public Person(String username, int age, int minimalber) {
         this.username = username;
-        this.age = age;   
+        this.age = age;  
+        
     }
     
     public void sayHello() {
@@ -21,5 +22,7 @@ public class Person {
 
     public int getAge() {
         return age;
-    }    
+    }   
+    
+   
 }

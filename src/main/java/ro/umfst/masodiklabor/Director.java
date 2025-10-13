@@ -12,10 +12,12 @@ public class Director extends Person{
     private static Director instance;
     private final List<Manager> managerList;
     
+    
     public Director(String username,int age,int salary){
-        super(username,age);
+        super(username,age,minimalber);
         this.salary = salary;
         this.managerList = new ArrayList<>();
+       
     }
     
     public static Director getInstance(String username,int age,int salary){
@@ -28,7 +30,7 @@ public class Director extends Person{
     
      public void calculateSalary() {
         if (managerList != null) {
-            salary = 500 * managerList.size();
+            salary = minimalber * managerList.size();
         } else {
             salary = 0;
         }
